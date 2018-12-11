@@ -3,7 +3,7 @@
 #include <unordered_set>
 
 int main(int argc, char ** argv) {
-	FILE * in = fopen("in/day-1.2.in", "r");
+	FILE * in = fopen("in/day-01.in", "r");
 
 	int cum_freq = 0, freq;
 	std::unordered_set<int> seen;
