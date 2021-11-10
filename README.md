@@ -1,18 +1,27 @@
 # Advent of Code
 https://adventofcode.com
 
+## Installation
+### C++
+1. Clone the repository
+2. Install dependencies
+    1. gcc (C++20 capable)
+    2. fmt: https://fmt.dev/latest/index.html
+    3. docopt: http://docopt.org/
+    4. Google benchmark: https://github.com/google/benchmark
+    5. pthread (See your distribution's documentation on installing the pthread library)
+3. `(mkdir .build && cd .build && cmake .. && make)`
+4. `.build/aoc --help`
+5. `.build/bench --help`
+
 ## Benchmarks
 CPU: Intel i7 4800MQ
 
-+----------+------+----------------+
 | Language | Year | Total Time (s) |
-+----------+------+----------------+
+|:--------:|:----:|:--------------:|
 |    C++   | 2020 |      1.6       |
-+----------+------+----------------+
 
 ### C++
-
-
 ```
 2021-11-08T16:38:03+05:30
 Running .build/bench
