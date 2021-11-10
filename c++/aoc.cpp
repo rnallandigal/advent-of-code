@@ -101,10 +101,9 @@ int main(int argc, char const ** argv) {
 		std::string filename = fmt::format("in/{}.{:0>2}.in", year, day);
 		std::string solnname = fmt::format("{}.{:0>2}.{}", year, day, part);
 
-		std::string input = aoc::read(filename);
 		if(auto it = solutions.find(solnname); it != solutions.end()) {
 			auto [_, soln] = *it;
-			fmt::print("{}\n", soln(input));
+			fmt::print("{}\n", soln(aoc::read(filename)));
 		} else {
 			throw std::runtime_error(fmt::format(
 				"Cannot find solution corresponding to name: {}",
