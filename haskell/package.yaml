@@ -1,0 +1,66 @@
+name:                aoc-haskell
+version:             0.1.0.0
+github:              "rnallandigal/advent-of-code"
+license:             MIT
+author:              "Rohith Nallandigal"
+maintainer:          "rnallandigal@gmail.com"
+copyright:           "Copyright (c) 2020 Rohith Nallandigal"
+
+dependencies:
+  - base >= 4.7 && < 5
+  - semigroupoids
+  - optparse-applicative
+  - parsec
+  - containers
+  - unordered-containers >= 0.2.13.0
+  - regex-tdfa
+  - hedgehog
+  - split
+  - vector
+  - vector-split
+  - criterion
+  - transformers
+  - mtl
+  - ghc-prim
+  - primitive
+  - linear
+  - pretty-simple
+  - text
+  - monad-loops
+  - arithmoi
+  - distributive
+  - pqueue
+  - deepseq
+  - hashable
+
+ghc-options:
+  - -O2
+  - -threaded
+
+library:
+  source-dirs: src
+
+executables:
+  aoc:
+    main:                Main.hs
+    other-modules:       []
+    source-dirs:         app
+    ghc-options:
+      - -O2
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - aoc-haskell
+
+  bench:
+    main:                Bench.hs
+    other-modules:       []
+    source-dirs:         app
+    ghc-options:
+      - -O2
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - aoc-haskell

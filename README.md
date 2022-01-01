@@ -1,6 +1,9 @@
 # Advent of Code
 https://adventofcode.com
 
+## Acknowledgements
+Thanks to Justin Le (https://github.com/mstksg/advent-of-code-2020) for inspiration on haskell solutions.
+
 ## Installation
 ### C++
 1. Clone the repository
@@ -14,12 +17,20 @@ https://adventofcode.com
 4. `.build/aoc --help`
 5. `.build/bench --help`
 
+### Haskell
+1. Clone the repository
+2. Install Haskell stack (https://docs.haskellstack.org/en/stable/README/)
+3. `stack build`
+4. `stack exec aoc -- --help`
+5. `stack exec bench -- --help`
+
 ## Benchmarks
-CPU: Intel i7 4800MQ
+CPU: Intel i7 8750H
 
 | Language | Year | Total Time (s) |
 |:--------:|:----:|:--------------:|
 |    C++   | 2020 |      1.6       |
+|  Haskell | 2020 |      5.0       |
 
 ### C++
 ```
@@ -93,3 +104,6 @@ AOC_2020_24_1      0.338 ms        0.337 ms         2074
 AOC_2020_24_2        174 ms          174 ms            4
 AOC_2020_25_1      0.519 ms        0.518 ms         1349
 ```
+
+### Haskell
+Criterion benchmarks: https://github.com/rnallandigal/advent-of-code/blob/master/haskell/criterion.html
