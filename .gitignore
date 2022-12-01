@@ -3,3 +3,6 @@
 .build
 out
 purgatory
+
+# secret session token
+.token
