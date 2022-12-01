@@ -9,6 +9,8 @@ purgatory
 
 # stash stores files not yet ready to be committed
 stash
+
+scripts
 rust
 screenrecordings
 
