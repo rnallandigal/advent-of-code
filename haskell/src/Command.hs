@@ -2,8 +2,8 @@ module Command (Command (..), readCommand) where
 
 import Options.Applicative
 
-data Command = Problem (Int, Int, Int)
-             | All
+data Command = List
+             | Run String
 
 readCommand :: IO Command
 readCommand = execParser $ info
@@ -13,34 +13,17 @@ readCommand = execParser $ info
     <> header "Advent of Code Runner" )
 
 commandP :: Parser Command
-commandP = problemP <|> allP
+commandP = listP <|> runP
 
-problemP :: Parser Command
-problemP = fmap Problem $ (,,) <$> yearP <*> dayP <*> partP
+listP :: Parser Command
+listP = List <$ switch
+     ( short 'l'
+    <> long "list"
+    <> help "list all available problems" )
 
-allP :: Parser Command
-allP = All <$ switch
-     ( short 'a'
-    <> long "all"
-    <> help "Run all problems")
-
-yearP :: Parser Int
-yearP = option auto $
-       short 'y'
-    <> long "year"
-    <> help "the year number (ex. 2018) of the problem to run"
-    <> metavar "YEAR"
-
-dayP :: Parser Int
-dayP = option auto $
-       short 'd'
-    <> long "day"
-    <> help "the day number (1 - 25) of the problem to run"
-    <> metavar "DAY"
-
-partP :: Parser Int
-partP = option auto $
-       short 'p'
-    <> long "part"
-    <> help "the part (1, 2) of the problem to run"
-    <> metavar "PART"
+runP :: Parser Command
+runP = fmap Run $ argument str $
+       value ""
+    <> showDefault
+    <> help "select the problems to run using a regular expression, i.e. \"2022.0[123]\""
+    <> metavar "FILTER"
