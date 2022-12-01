@@ -39,6 +39,8 @@ import qualified AOC2020.Day23 as AOC2020
 import qualified AOC2020.Day24 as AOC2020
 import qualified AOC2020.Day25 as AOC2020
 
+import qualified AOC2022.Day01 as AOC2022
+
 problems :: M.Map (Int, Int, Int) (String -> String)
 problems = M.fromList
     [ ((2018,  1, 1), AOC2018.day01a)
@@ -98,7 +100,10 @@ problems = M.fromList
     , ((2020, 23, 2), AOC2020.day23b)
     , ((2020, 24, 1), AOC2020.day24a)
     , ((2020, 24, 2), AOC2020.day24b)
-    , ((2020, 25, 1), AOC2020.day25a) ]
+    , ((2020, 25, 1), AOC2020.day25a)
+
+    , ((2022,  1, 1), AOC2022.day01a)
+    , ((2022,  1, 2), AOC2022.day01b) ]
 
 main :: IO ()
 main = do

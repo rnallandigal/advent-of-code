@@ -6,3 +6,11 @@ purgatory
 
 # secret session token
 .token
+
+# stash stores files not yet ready to be committed
+stash
+rust
+screenrecordings
+
+# don't commit cpp inputs until solutions are implemented
+c++/in/2022.*
