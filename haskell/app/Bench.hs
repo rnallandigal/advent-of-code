@@ -95,7 +95,7 @@ main = defaultMain
     , env (readFile "in/2018.03.in") (bench "2018.03.2" . nf AOC2018.day03b)
     , env (readFile "in/2018.04.in") (bench "2018.04.1" . nf AOC2018.day04a)
     , env (readFile "in/2018.04.in") (bench "2018.04.2" . nf AOC2018.day04b)
-   
+
     , env (readFile "in/2020.01.in") (bench "2020.01.1" . nf AOC2020.day01a)
     , env (readFile "in/2020.01.in") (bench "2020.01.2" . nf AOC2020.day01b)
     , env (readFile "in/2020.02.in") (bench "2020.02.1" . nf AOC2020.day02a)

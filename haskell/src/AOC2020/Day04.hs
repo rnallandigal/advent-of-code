@@ -5,8 +5,8 @@ import           Data.Functor.Identity
 import           Data.List.Split (chunksOf, endByOneOf, splitOn)
 import qualified Data.Map.Strict as M
 import           Data.Maybe (fromMaybe)
-import           Text.Parsec hiding (between, count)
 import qualified Text.Parsec as P (count)
+import           Text.Parsec hiding (between, count)
 
 import           Lib (between, count, pairs)
 
