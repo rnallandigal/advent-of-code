@@ -70,6 +70,58 @@ set(SOURCE_FILES
 	src/2020/23.cpp
 	src/2020/24.cpp
 	src/2020/25.cpp
+
+	src/2021/01.cpp
+	src/2021/02.cpp
+	src/2021/03.cpp
+	src/2021/04.cpp
+	src/2021/05.cpp
+	src/2021/06.cpp
+	src/2021/07.cpp
+	src/2021/08.cpp
+	src/2021/09.cpp
+	src/2021/10.cpp
+	src/2021/11.cpp
+	src/2021/12.cpp
+	src/2021/13.cpp
+	src/2021/14.cpp
+	src/2021/15.cpp
+	src/2021/16.cpp
+	src/2021/17.cpp
+	src/2021/18.cpp
+	src/2021/19.cpp
+	src/2021/20.cpp
+	src/2021/21.cpp
+	src/2021/22.cpp
+	src/2021/23.cpp
+	src/2021/24.cpp
+	src/2021/25.cpp
+
+	src/2022/01.cpp
+	src/2022/02.cpp
+	src/2022/03.cpp
+	src/2022/04.cpp
+	src/2022/05.cpp
+	src/2022/06.cpp
+	src/2022/07.cpp
+	src/2022/08.cpp
+	src/2022/09.cpp
+	src/2022/10.cpp
+	src/2022/11.cpp
+	src/2022/12.cpp
+	src/2022/13.cpp
+	src/2022/14.cpp
+	src/2022/15.cpp
+	src/2022/16.cpp
+	src/2022/17.cpp
+	src/2022/18.cpp
+	src/2022/19.cpp
+	src/2022/20.cpp
+	src/2022/21.cpp
+	src/2022/22.cpp
+	src/2022/23.cpp
+	src/2022/24.cpp
+	src/2022/25.cpp
 )
 
 # object libs
@@ -78,3 +130,16 @@ target_compile_options(objects-0 PRIVATE -O0)
 
 add_library(objects-3 OBJECT ${SOURCE_FILES})
 target_compile_options(objects-3 PRIVATE -O3)
+
+# entr commands to build/run/test/bench on code change
+function(add_watch_target name cmd)
+	add_custom_target(watch-${name}
+		COMMAND bash -c "while true; do fd -e cpp -e h | entr -ccds \"time ${cmd}\"; [ $? -eq 2 ] || break; done"
+		WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+		VERBATIM
+	)
+endfunction()
+
+set(makecmd "time (cd ${CMAKE_CURRENT_BINARY_DIR} && make ${MAIN})")
+add_watch_target(rebuild ${makecmd})
+add_watch_target(rerun "${makecmd} && ${CMAKE_CURRENT_BINARY_DIR}/aoc run 2022")

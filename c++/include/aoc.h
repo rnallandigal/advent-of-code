@@ -7,6 +7,11 @@
 		std::string part2(std::string const & in);	\
 	}
 
+#define AOC_SOLN_DECL_DAY25(name)					\
+	namespace name {								\
+		std::string part1(std::string const & in);	\
+	}
+
 AOC_SOLN_DECL(aoc2018::day01)
 AOC_SOLN_DECL(aoc2018::day02)
 AOC_SOLN_DECL(aoc2018::day03)
@@ -36,8 +41,58 @@ AOC_SOLN_DECL(aoc2020::day21)
 AOC_SOLN_DECL(aoc2020::day22)
 AOC_SOLN_DECL(aoc2020::day23)
 AOC_SOLN_DECL(aoc2020::day24)
-namespace aoc2020::day25 {
-	std::string part1(std::string const & in);
-}
+AOC_SOLN_DECL_DAY25(aoc2020::day25)
+
+AOC_SOLN_DECL(aoc2021::day01)
+AOC_SOLN_DECL(aoc2021::day02)
+AOC_SOLN_DECL(aoc2021::day03)
+AOC_SOLN_DECL(aoc2021::day04)
+AOC_SOLN_DECL(aoc2021::day05)
+AOC_SOLN_DECL(aoc2021::day06)
+AOC_SOLN_DECL(aoc2021::day07)
+AOC_SOLN_DECL(aoc2021::day08)
+AOC_SOLN_DECL(aoc2021::day09)
+AOC_SOLN_DECL(aoc2021::day10)
+AOC_SOLN_DECL(aoc2021::day11)
+AOC_SOLN_DECL(aoc2021::day12)
+AOC_SOLN_DECL(aoc2021::day13)
+AOC_SOLN_DECL(aoc2021::day14)
+AOC_SOLN_DECL(aoc2021::day15)
+AOC_SOLN_DECL(aoc2021::day16)
+AOC_SOLN_DECL(aoc2021::day17)
+AOC_SOLN_DECL(aoc2021::day18)
+AOC_SOLN_DECL(aoc2021::day19)
+AOC_SOLN_DECL(aoc2021::day20)
+AOC_SOLN_DECL(aoc2021::day21)
+AOC_SOLN_DECL(aoc2021::day22)
+AOC_SOLN_DECL(aoc2021::day23)
+AOC_SOLN_DECL(aoc2021::day24)
+AOC_SOLN_DECL_DAY25(aoc2021::day25)
+
+AOC_SOLN_DECL(aoc2022::day01)
+AOC_SOLN_DECL(aoc2022::day02)
+AOC_SOLN_DECL(aoc2022::day03)
+AOC_SOLN_DECL(aoc2022::day04)
+AOC_SOLN_DECL(aoc2022::day05)
+AOC_SOLN_DECL(aoc2022::day06)
+AOC_SOLN_DECL(aoc2022::day07)
+AOC_SOLN_DECL(aoc2022::day08)
+AOC_SOLN_DECL(aoc2022::day09)
+AOC_SOLN_DECL(aoc2022::day10)
+AOC_SOLN_DECL(aoc2022::day11)
+AOC_SOLN_DECL(aoc2022::day12)
+AOC_SOLN_DECL(aoc2022::day13)
+AOC_SOLN_DECL(aoc2022::day14)
+AOC_SOLN_DECL(aoc2022::day15)
+AOC_SOLN_DECL(aoc2022::day16)
+AOC_SOLN_DECL(aoc2022::day17)
+AOC_SOLN_DECL(aoc2022::day18)
+AOC_SOLN_DECL(aoc2022::day19)
+AOC_SOLN_DECL(aoc2022::day20)
+AOC_SOLN_DECL(aoc2022::day21)
+AOC_SOLN_DECL(aoc2022::day22)
+AOC_SOLN_DECL(aoc2022::day23)
+AOC_SOLN_DECL(aoc2022::day24)
+AOC_SOLN_DECL_DAY25(aoc2022::day25)
 
 #endif	// AOC_H

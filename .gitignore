@@ -13,6 +13,3 @@ stash
 scripts
 rust
 screenrecordings
-
-# don't commit cpp inputs until solutions are implemented
-c++/in/2022.*
