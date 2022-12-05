@@ -134,12 +134,12 @@ target_compile_options(objects-3 PRIVATE -O3)
 # entr commands to build/run/test/bench on code change
 function(add_watch_target name cmd)
 	add_custom_target(watch-${name}
-		COMMAND bash -c "while true; do fd -e cpp -e h | entr -ccds \"time ${cmd}\"; [ $? -eq 2 ] || break; done"
+		COMMAND bash -c "while true; do fd -e cpp -e h | entr -ccds \"${cmd}\"; [ $? -eq 2 ] || break; done"
 		WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 		VERBATIM
 	)
 endfunction()
 
-set(makecmd "time (cd ${CMAKE_CURRENT_BINARY_DIR} && make ${MAIN})")
+set(makecmd "(cd ${CMAKE_CURRENT_BINARY_DIR} && time make ${MAIN})")
 add_watch_target(rebuild ${makecmd})
 add_watch_target(rerun "${makecmd} && ${CMAKE_CURRENT_BINARY_DIR}/aoc run 2022")

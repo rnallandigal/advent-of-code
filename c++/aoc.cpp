@@ -1,7 +1,6 @@
 #include <string>
 #include <map>
-#include <stdexcept>
-#include <tuple>
+#include <regex>
 
 #include <fmt/format.h>
 #include <docopt/docopt.h>
@@ -12,18 +11,16 @@
 const char COMMAND[] =
 R"(Advent Of Code Runner
 
-Usage:  aoc --year YEAR --day DAY --part PART
-        aoc --all
+Usage:  aoc [FILTER]
+        aoc --list
 
 Options:
-    -y YEAR, --year YEAR    The year of the solution to run
-    -d DAY, --day DAY       The day of the solution to run
-    -p PART, --part PART    The part of the solution to run
-    -a, --all               Run all solutions
-    -h, --help              Show this screen
+    FILTER          Select the problems to run using a regular expression, i.e. "2022.0[123]" [default: ""]
+    -l, --list      List all available problems
+    -h, --help      Show this screen
 )";
 
-std::map<std::string, std::function<std::string(std::string)>> solutions = {
+std::map<std::string, std::function<std::string(std::string)>> problems = {
 	{ "2018.01.1", aoc2018::day01::part1 },
 	{ "2018.01.2", aoc2018::day01::part2 },
 	{ "2018.02.1", aoc2018::day02::part1 },
@@ -187,28 +184,22 @@ std::map<std::string, std::function<std::string(std::string)>> solutions = {
 int main(int argc, char const ** argv) {
     auto args = docopt::docopt(COMMAND, { argv + 1, argv + argc }, true, "");
 
-	if(args["--all"].asBool()) {
-		for(auto [k, soln] : solutions) {
-			std::string root = k.substr(0, k.find_last_of('.'));
-			std::string input = aoc::read(fmt::format("in/{}.in", root));
-			fmt::print("{}: {}\n", k, soln(input));
+	if(args["--list"].asBool()) {
+		for(auto [id, _] : problems) {
+			fmt::print("{}\n", id);
 		}
 	} else {
-		long year = args["--year"].asLong();
-		long day = args["--day"].asLong();
-		std::string part = args["--part"].asString();
+		// docopt.cpp can't set a default value for positional arguments
+		std::string filter_string
+			= args["FILTER"].kind() == docopt::Kind::String
+			? args["FILTER"].asString()
+			: "";
 
-		std::string filename = fmt::format("in/{}.{:0>2}.in", year, day);
-		std::string solnname = fmt::format("{}.{:0>2}.{}", year, day, part);
-
-		if(auto it = solutions.find(solnname); it != solutions.end()) {
-			auto [_, soln] = *it;
-			fmt::print("{}\n", soln(aoc::read(filename)));
-		} else {
-			throw std::runtime_error(fmt::format(
-				"Cannot find solution corresponding to name: {}",
-				solnname
-			));
+		std::regex filter(filter_string);
+		for(auto [id, impl] : problems) {
+			if(!regex_search(id, filter)) continue;
+			std::string inputfile = fmt::format("in/{}.in", id.substr(0, 7));
+			fmt::print("{}: {}\n", id, impl(aoc::read(inputfile)));
 		}
 	}
     return 0;
