@@ -140,6 +140,6 @@ function(add_watch_target name cmd)
 	)
 endfunction()
 
-set(makecmd "(cd ${CMAKE_CURRENT_BINARY_DIR} && time make ${MAIN})")
+set(makecmd "(cd ${CMAKE_CURRENT_BINARY_DIR} && time make -j`nproc` ${MAIN})")
 add_watch_target(rebuild ${makecmd})
 add_watch_target(rerun "${makecmd} && ${CMAKE_CURRENT_BINARY_DIR}/aoc run 2022")
