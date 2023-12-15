@@ -86,6 +86,32 @@ import qualified AOC2022.Day23 as AOC2022
 import qualified AOC2022.Day24 as AOC2022
 import qualified AOC2022.Day25 as AOC2022
 
+import qualified AOC2023.Day01 as AOC2023
+import qualified AOC2023.Day02 as AOC2023
+import qualified AOC2023.Day03 as AOC2023
+import qualified AOC2023.Day04 as AOC2023
+import qualified AOC2023.Day05 as AOC2023
+import qualified AOC2023.Day06 as AOC2023
+import qualified AOC2023.Day07 as AOC2023
+import qualified AOC2023.Day08 as AOC2023
+import qualified AOC2023.Day09 as AOC2023
+import qualified AOC2023.Day10 as AOC2023
+import qualified AOC2023.Day11 as AOC2023
+import qualified AOC2023.Day12 as AOC2023
+import qualified AOC2023.Day13 as AOC2023
+import qualified AOC2023.Day14 as AOC2023
+import qualified AOC2023.Day15 as AOC2023
+import qualified AOC2023.Day16 as AOC2023
+import qualified AOC2023.Day17 as AOC2023
+import qualified AOC2023.Day18 as AOC2023
+import qualified AOC2023.Day19 as AOC2023
+import qualified AOC2023.Day20 as AOC2023
+import qualified AOC2023.Day21 as AOC2023
+import qualified AOC2023.Day22 as AOC2023
+import qualified AOC2023.Day23 as AOC2023
+import qualified AOC2023.Day24 as AOC2023
+import qualified AOC2023.Day25 as AOC2023
+
 main = defaultMain
     [ env (readFile "in/2018.01.in") (bench "2018.01.1" . nf AOC2018.day01a)
     , env (readFile "in/2018.01.in") (bench "2018.01.2" . nf AOC2018.day01b)
@@ -244,4 +270,56 @@ main = defaultMain
     , env (readFile "in/2022.23.in") (bench "2022.23.2" . nf AOC2022.day23b)
     , env (readFile "in/2022.24.in") (bench "2022.24.1" . nf AOC2022.day24a)
     , env (readFile "in/2022.24.in") (bench "2022.24.2" . nf AOC2022.day24b)
-    , env (readFile "in/2022.25.in") (bench "2022.25.1" . nf AOC2022.day25a) ]
+    , env (readFile "in/2022.25.in") (bench "2022.25.1" . nf AOC2022.day25a)
+
+    , env (readFile "in/2023.01.in") (bench "2023.01.1" . nf AOC2023.day01a)
+    , env (readFile "in/2023.01.in") (bench "2023.01.2" . nf AOC2023.day01b)
+    , env (readFile "in/2023.02.in") (bench "2023.02.1" . nf AOC2023.day02a)
+    , env (readFile "in/2023.02.in") (bench "2023.02.2" . nf AOC2023.day02b)
+    , env (readFile "in/2023.03.in") (bench "2023.03.1" . nf AOC2023.day03a)
+    , env (readFile "in/2023.03.in") (bench "2023.03.2" . nf AOC2023.day03b)
+    , env (readFile "in/2023.04.in") (bench "2023.04.1" . nf AOC2023.day04a)
+    , env (readFile "in/2023.04.in") (bench "2023.04.2" . nf AOC2023.day04b)
+    , env (readFile "in/2023.05.in") (bench "2023.05.1" . nf AOC2023.day05a)
+    , env (readFile "in/2023.05.in") (bench "2023.05.2" . nf AOC2023.day05b)
+    , env (readFile "in/2023.06.in") (bench "2023.06.1" . nf AOC2023.day06a)
+    , env (readFile "in/2023.06.in") (bench "2023.06.2" . nf AOC2023.day06b)
+    , env (readFile "in/2023.07.in") (bench "2023.07.1" . nf AOC2023.day07a)
+    , env (readFile "in/2023.07.in") (bench "2023.07.2" . nf AOC2023.day07b)
+    , env (readFile "in/2023.08.in") (bench "2023.08.1" . nf AOC2023.day08a)
+    , env (readFile "in/2023.08.in") (bench "2023.08.2" . nf AOC2023.day08b)
+    , env (readFile "in/2023.09.in") (bench "2023.09.1" . nf AOC2023.day09a)
+    , env (readFile "in/2023.09.in") (bench "2023.09.2" . nf AOC2023.day09b)
+    , env (readFile "in/2023.10.in") (bench "2023.10.1" . nf AOC2023.day10a)
+    , env (readFile "in/2023.10.in") (bench "2023.10.2" . nf AOC2023.day10b)
+    , env (readFile "in/2023.11.in") (bench "2023.11.1" . nf AOC2023.day11a)
+    , env (readFile "in/2023.11.in") (bench "2023.11.2" . nf AOC2023.day11b)
+    , env (readFile "in/2023.12.in") (bench "2023.12.1" . nf AOC2023.day12a)
+    , env (readFile "in/2023.12.in") (bench "2023.12.2" . nf AOC2023.day12b)
+    , env (readFile "in/2023.13.in") (bench "2023.13.1" . nf AOC2023.day13a)
+    , env (readFile "in/2023.13.in") (bench "2023.13.2" . nf AOC2023.day13b)
+    , env (readFile "in/2023.14.in") (bench "2023.14.1" . nf AOC2023.day14a)
+    , env (readFile "in/2023.14.in") (bench "2023.14.2" . nf AOC2023.day14b)
+    , env (readFile "in/2023.15.in") (bench "2023.15.1" . nf AOC2023.day15a)
+    , env (readFile "in/2023.15.in") (bench "2023.15.2" . nf AOC2023.day15b)
+    , env (readFile "in/2023.16.in") (bench "2023.16.1" . nf AOC2023.day16a)
+    , env (readFile "in/2023.16.in") (bench "2023.16.2" . nf AOC2023.day16b)
+    , env (readFile "in/2023.17.in") (bench "2023.17.1" . nf AOC2023.day17a)
+    , env (readFile "in/2023.17.in") (bench "2023.17.2" . nf AOC2023.day17b)
+    , env (readFile "in/2023.18.in") (bench "2023.18.1" . nf AOC2023.day18a)
+    , env (readFile "in/2023.18.in") (bench "2023.18.2" . nf AOC2023.day18b)
+    , env (readFile "in/2023.19.in") (bench "2023.19.1" . nf AOC2023.day19a)
+    , env (readFile "in/2023.19.in") (bench "2023.19.2" . nf AOC2023.day19b)
+    , env (readFile "in/2023.20.in") (bench "2023.20.1" . nf AOC2023.day20a)
+    , env (readFile "in/2023.20.in") (bench "2023.20.2" . nf AOC2023.day20b)
+    , env (readFile "in/2023.21.in") (bench "2023.21.1" . nf AOC2023.day21a)
+    , env (readFile "in/2023.21.in") (bench "2023.21.2" . nf AOC2023.day21b)
+    , env (readFile "in/2023.22.in") (bench "2023.22.1" . nf AOC2023.day22a)
+    , env (readFile "in/2023.22.in") (bench "2023.22.2" . nf AOC2023.day22b)
+    , env (readFile "in/2023.23.in") (bench "2023.23.1" . nf AOC2023.day23a)
+    , env (readFile "in/2023.23.in") (bench "2023.23.2" . nf AOC2023.day23b)
+    , env (readFile "in/2023.24.in") (bench "2023.24.1" . nf AOC2023.day24a)
+    , env (readFile "in/2023.24.in") (bench "2023.24.2" . nf AOC2023.day24b)
+    , env (readFile "in/2023.25.in") (bench "2023.25.1" . nf AOC2023.day25a)
+
+    ]

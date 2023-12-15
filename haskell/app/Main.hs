@@ -92,6 +92,32 @@ import qualified AOC2022.Day23 as AOC2022
 import qualified AOC2022.Day24 as AOC2022
 import qualified AOC2022.Day25 as AOC2022
 
+import qualified AOC2023.Day01 as AOC2023
+import qualified AOC2023.Day02 as AOC2023
+import qualified AOC2023.Day03 as AOC2023
+import qualified AOC2023.Day04 as AOC2023
+import qualified AOC2023.Day05 as AOC2023
+import qualified AOC2023.Day06 as AOC2023
+import qualified AOC2023.Day07 as AOC2023
+import qualified AOC2023.Day08 as AOC2023
+import qualified AOC2023.Day09 as AOC2023
+import qualified AOC2023.Day10 as AOC2023
+import qualified AOC2023.Day11 as AOC2023
+import qualified AOC2023.Day12 as AOC2023
+import qualified AOC2023.Day13 as AOC2023
+import qualified AOC2023.Day14 as AOC2023
+import qualified AOC2023.Day15 as AOC2023
+import qualified AOC2023.Day16 as AOC2023
+import qualified AOC2023.Day17 as AOC2023
+import qualified AOC2023.Day18 as AOC2023
+import qualified AOC2023.Day19 as AOC2023
+import qualified AOC2023.Day20 as AOC2023
+import qualified AOC2023.Day21 as AOC2023
+import qualified AOC2023.Day22 as AOC2023
+import qualified AOC2023.Day23 as AOC2023
+import qualified AOC2023.Day24 as AOC2023
+import qualified AOC2023.Day25 as AOC2023
+
 problems :: M.Map String (String -> String)
 problems = M.fromList
     [ ("2018.01.1", AOC2018.day01a)
@@ -251,7 +277,58 @@ problems = M.fromList
     , ("2022.23.2", AOC2022.day23b)
     , ("2022.24.1", AOC2022.day24a)
     , ("2022.24.2", AOC2022.day24b)
-    , ("2022.25.1", AOC2022.day25a) ]
+    , ("2022.25.1", AOC2022.day25a)
+
+    , ("2023.01.1", AOC2023.day01a)
+    , ("2023.01.2", AOC2023.day01b)
+    , ("2023.02.1", AOC2023.day02a)
+    , ("2023.02.2", AOC2023.day02b)
+    , ("2023.03.1", AOC2023.day03a)
+    , ("2023.03.2", AOC2023.day03b)
+    , ("2023.04.1", AOC2023.day04a)
+    , ("2023.04.2", AOC2023.day04b)
+    , ("2023.05.1", AOC2023.day05a)
+    , ("2023.05.2", AOC2023.day05b)
+    , ("2023.06.1", AOC2023.day06a)
+    , ("2023.06.2", AOC2023.day06b)
+    , ("2023.07.1", AOC2023.day07a)
+    , ("2023.07.2", AOC2023.day07b)
+    , ("2023.08.1", AOC2023.day08a)
+    , ("2023.08.2", AOC2023.day08b)
+    , ("2023.09.1", AOC2023.day09a)
+    , ("2023.09.2", AOC2023.day09b)
+    , ("2023.10.1", AOC2023.day10a)
+    , ("2023.10.2", AOC2023.day10b)
+    , ("2023.11.1", AOC2023.day11a)
+    , ("2023.11.2", AOC2023.day11b)
+    , ("2023.12.1", AOC2023.day12a)
+    , ("2023.12.2", AOC2023.day12b)
+    , ("2023.13.1", AOC2023.day13a)
+    , ("2023.13.2", AOC2023.day13b)
+    , ("2023.14.1", AOC2023.day14a)
+    , ("2023.14.2", AOC2023.day14b)
+    , ("2023.15.1", AOC2023.day15a)
+    , ("2023.15.2", AOC2023.day15b)
+    , ("2023.16.1", AOC2023.day16a)
+    , ("2023.16.2", AOC2023.day16b)
+    , ("2023.17.1", AOC2023.day17a)
+    , ("2023.17.2", AOC2023.day17b)
+    , ("2023.18.1", AOC2023.day18a)
+    , ("2023.18.2", AOC2023.day18b)
+    , ("2023.19.1", AOC2023.day19a)
+    , ("2023.19.2", AOC2023.day19b)
+    , ("2023.20.1", AOC2023.day20a)
+    , ("2023.20.2", AOC2023.day20b)
+    , ("2023.21.1", AOC2023.day21a)
+    , ("2023.21.2", AOC2023.day21b)
+    , ("2023.22.1", AOC2023.day22a)
+    , ("2023.22.2", AOC2023.day22b)
+    , ("2023.23.1", AOC2023.day23a)
+    , ("2023.23.2", AOC2023.day23b)
+    , ("2023.24.1", AOC2023.day24a)
+    , ("2023.24.2", AOC2023.day24b)
+    , ("2023.25.1", AOC2023.day25a)
+    ]
 
 main :: IO ()
 main = do

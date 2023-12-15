@@ -1,6 +1,8 @@
 #ifndef AOC_H
 #define AOC_H
 
+#include <string>
+
 #define AOC_SOLN_DECL(name)							\
 	namespace name {								\
 		std::string part1(std::string const & in);	\
@@ -95,4 +97,29 @@ AOC_SOLN_DECL(aoc2022::day23)
 AOC_SOLN_DECL(aoc2022::day24)
 AOC_SOLN_DECL_DAY25(aoc2022::day25)
 
+AOC_SOLN_DECL(aoc2023::day01)
+AOC_SOLN_DECL(aoc2023::day02)
+AOC_SOLN_DECL(aoc2023::day03)
+AOC_SOLN_DECL(aoc2023::day04)
+AOC_SOLN_DECL(aoc2023::day05)
+AOC_SOLN_DECL(aoc2023::day06)
+AOC_SOLN_DECL(aoc2023::day07)
+AOC_SOLN_DECL(aoc2023::day08)
+AOC_SOLN_DECL(aoc2023::day09)
+AOC_SOLN_DECL(aoc2023::day10)
+AOC_SOLN_DECL(aoc2023::day11)
+AOC_SOLN_DECL(aoc2023::day12)
+AOC_SOLN_DECL(aoc2023::day13)
+AOC_SOLN_DECL(aoc2023::day14)
+AOC_SOLN_DECL(aoc2023::day15)
+AOC_SOLN_DECL(aoc2023::day16)
+AOC_SOLN_DECL(aoc2023::day17)
+AOC_SOLN_DECL(aoc2023::day18)
+AOC_SOLN_DECL(aoc2023::day19)
+AOC_SOLN_DECL(aoc2023::day20)
+AOC_SOLN_DECL(aoc2023::day21)
+AOC_SOLN_DECL(aoc2023::day22)
+AOC_SOLN_DECL(aoc2023::day23)
+AOC_SOLN_DECL(aoc2023::day24)
+AOC_SOLN_DECL_DAY25(aoc2023::day25)
 #endif	// AOC_H

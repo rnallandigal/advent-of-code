@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.35.0.
+-- This file has been generated from package.yaml by hpack version 0.36.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 13959c87181f8be1ffcd317a1e146dd123f4b9f12e5c2998f92a3ee8f1c1fbf6
+-- hash: 7c51f70af0bc1b8fa40b579af9ca1e3398c90b785e4f458335cf8e1b8afc67ca
 
 name:           aoc-haskell
 version:        0.1.0.0
@@ -101,6 +101,31 @@ library
       AOC2022.Day23
       AOC2022.Day24
       AOC2022.Day25
+      AOC2023.Day01
+      AOC2023.Day02
+      AOC2023.Day03
+      AOC2023.Day04
+      AOC2023.Day05
+      AOC2023.Day06
+      AOC2023.Day07
+      AOC2023.Day08
+      AOC2023.Day09
+      AOC2023.Day10
+      AOC2023.Day11
+      AOC2023.Day12
+      AOC2023.Day13
+      AOC2023.Day14
+      AOC2023.Day15
+      AOC2023.Day16
+      AOC2023.Day17
+      AOC2023.Day18
+      AOC2023.Day19
+      AOC2023.Day20
+      AOC2023.Day21
+      AOC2023.Day22
+      AOC2023.Day23
+      AOC2023.Day24
+      AOC2023.Day25
       Command
       Lib
   other-modules:
