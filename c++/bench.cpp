@@ -3,12 +3,13 @@
 #include "aoc.h"
 #include "utils.h"
 
-#define AOC_BENCHMARK(bench, input, func)					\
-	void bench(benchmark::State & state) {					\
-		std::string file = aoc::read("in/"#input".in");		\
-		for(auto _ : state) func(file);						\
-	}														\
-	BENCHMARK(bench)->Unit(benchmark::kMillisecond)
+#define AOC_BENCHMARK(bench, input, func)                 \
+    void bench(benchmark::State& state) {                 \
+        std::string file = aoc::read("in/" #input ".in"); \
+        for(auto _ : state)                               \
+            func(file);                                   \
+    }                                                     \
+    BENCHMARK(bench)->Unit(benchmark::kMillisecond)
 
 AOC_BENCHMARK(AOC_2018_01_1, 2018.01, aoc2018::day01::part1);
 AOC_BENCHMARK(AOC_2018_01_2, 2018.01, aoc2018::day01::part2);
