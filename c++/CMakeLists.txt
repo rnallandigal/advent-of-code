@@ -123,6 +123,32 @@ set(SOURCE_FILES
 	src/2022/23.cpp
 	src/2022/24.cpp
 	src/2022/25.cpp
+
+	src/2023/01.cpp
+	src/2023/02.cpp
+	src/2023/03.cpp
+	src/2023/04.cpp
+	src/2023/05.cpp
+	src/2023/06.cpp
+	src/2023/07.cpp
+	src/2023/08.cpp
+	src/2023/09.cpp
+	src/2023/10.cpp
+	src/2023/11.cpp
+	src/2023/12.cpp
+	src/2023/13.cpp
+	src/2023/14.cpp
+	src/2023/15.cpp
+	src/2023/16.cpp
+	src/2023/17.cpp
+	src/2023/18.cpp
+	src/2023/19.cpp
+	src/2023/20.cpp
+	src/2023/21.cpp
+	src/2023/22.cpp
+	src/2023/23.cpp
+	src/2023/24.cpp
+	src/2023/25.cpp
 )
 
 # object libs
