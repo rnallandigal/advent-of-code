@@ -1,9 +1,9 @@
-#include <vector>
 #include <string>
+#include <tuple>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
-#include <tuple>
+#include <vector>
 
 #include <fmt/format.h>
 
@@ -11,12 +11,8 @@
 
 namespace aoc2021::day05 {
 
-std::string part1(std::string const & in) {
-	return fmt::format("{}", "");
-}
+std::string part1(std::string const& in) { return fmt::format("{}", ""); }
 
-std::string part2(std::string const & in) {
-	return fmt::format("{}", "");
-}
+std::string part2(std::string const& in) { return fmt::format("{}", ""); }
 
-}	// namespace aoc2021::day05
+} // namespace aoc2021::day05

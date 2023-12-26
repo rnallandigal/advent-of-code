@@ -1,16 +1,16 @@
 #ifndef AOC_H
 #define AOC_H
 
-#define AOC_SOLN_DECL(name)							\
-	namespace name {								\
-		std::string part1(std::string const & in);	\
-		std::string part2(std::string const & in);	\
-	}
+#define AOC_SOLN_DECL(name)                   \
+    namespace name {                          \
+    std::string part1(std::string const& in); \
+    std::string part2(std::string const& in); \
+    }
 
-#define AOC_SOLN_DECL_DAY25(name)					\
-	namespace name {								\
-		std::string part1(std::string const & in);	\
-	}
+#define AOC_SOLN_DECL_DAY25(name)             \
+    namespace name {                          \
+    std::string part1(std::string const& in); \
+    }
 
 AOC_SOLN_DECL(aoc2018::day01)
 AOC_SOLN_DECL(aoc2018::day02)
@@ -95,4 +95,4 @@ AOC_SOLN_DECL(aoc2022::day23)
 AOC_SOLN_DECL(aoc2022::day24)
 AOC_SOLN_DECL_DAY25(aoc2022::day25)
 
-#endif	// AOC_H
+#endif // AOC_H
