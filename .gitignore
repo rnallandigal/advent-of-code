@@ -4,6 +4,9 @@
 out
 purgatory
 
+# clangd
+.cache
+
 # secret session token
 .token
 
