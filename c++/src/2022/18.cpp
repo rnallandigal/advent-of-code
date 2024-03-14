@@ -7,6 +7,7 @@
 #include <vector>
 
 #include <fmt/format.h>
+#include <fmt/ranges.h>
 
 #include "utils.h"
 
@@ -74,9 +75,12 @@ struct DisjointSet {
     }
 
     cube_t find(cube_t cube) {
-        while(cube != link[cube])
-            cube = link[cube];
-        return cube;
+        auto root = cube;
+        while(root != link[root])
+            root = link[root];
+        while(root != link[cube])
+            cube = exchange(link[cube], root);
+        return root;
     }
 };
 
