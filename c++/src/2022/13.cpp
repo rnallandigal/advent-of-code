@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <compare>
 #include <string>
 #include <variant>
@@ -80,21 +81,26 @@ std::string part1(std::string const& in) {
 std::string part2(std::string const& in) {
     auto packets = input(in);
 
-    packet_t divider1 = parse_packet("[[2]]"), divider2 = parse_packet("[[6]]");
-    packets.push_back(divider1);
-    packets.push_back(divider2);
+    packets.push_back(parse_packet("[[2]]"));
+    packets.push_back(parse_packet("[[6]]"));
+    packet_t* divider1 = &packets[packets.size() - 2];
+    packet_t* divider2 = &packets[packets.size() - 1];
 
-    auto less = [](packet_t const& a, packet_t const& b) {
-        return comp(a, b) < 0;
+    std::vector<packet_t*> ordering;
+    for(auto& packet : packets)
+        ordering.push_back(&packet);
+
+    auto less = [](packet_t const* lhs, packet_t const* rhs) {
+        return comp(*lhs, *rhs) < 0;
     };
 
-    std::sort(packets.begin(), packets.end(), less);
+    std::sort(ordering.begin(), ordering.end(), less);
 
-    auto i = std::lower_bound(packets.begin(), packets.end(), divider1, less);
-    auto j = std::lower_bound(packets.begin(), packets.end(), divider2, less);
+    auto i = std::lower_bound(ordering.begin(), ordering.end(), divider1, less);
+    auto j = std::lower_bound(ordering.begin(), ordering.end(), divider2, less);
 
     return fmt::format(
-        "{}", (i - packets.begin() + 1) * (j - packets.begin() + 1)
+        "{}", (i - ordering.begin() + 1) * (j - ordering.begin() + 1)
     );
 }
 
