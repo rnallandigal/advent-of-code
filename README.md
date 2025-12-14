@@ -19,10 +19,10 @@ Thanks to Justin Le (https://github.com/mstksg/advent-of-code-2020) for inspirat
 
 ### Haskell
 1. Clone the repository
-2. Install Haskell stack (https://docs.haskellstack.org/en/stable/README/)
-3. `stack build`
-4. `stack exec aoc -- --help`
-5. `stack exec bench -- --help`
+2. Install `ghc` and `cabal`: https://www.haskell.org/ghcup/
+3. `cabal update && cabal build`
+4. `cabal run aoc -- --help`
+5. `cabal run bench -- --help`
 
 ## Benchmarks
 CPU: Intel i7 8750H

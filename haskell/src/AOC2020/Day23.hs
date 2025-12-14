@@ -1,5 +1,6 @@
 module AOC2020.Day23 (day23a, day23b) where
 
+import           Control.Monad (replicateM_)
 import           Control.Monad.Loops (whileM_)
 import           Control.Monad.ST
 import           Control.Monad.State
